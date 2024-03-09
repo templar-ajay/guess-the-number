@@ -1,6 +1,8 @@
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+use std::thread::sleep;
+use std::time::Duration;
 
 fn main() {
     println!("Guess the number!");
@@ -10,7 +12,8 @@ fn main() {
     // println!("The secret number is: {secret_number}");
 
     loop {
-
+        sleep(Duration::from_secs(1));
+        
         println!("Please input your guess.");
         
         let mut guess = String::new();
@@ -23,6 +26,8 @@ fn main() {
         };
         
         println!("You guessed: {guess}");
+
+        sleep(Duration::from_millis(500));
         
         match guess.cmp(&secret_number){
             Ordering::Less => println!("Too small!"),
