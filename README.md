@@ -16,5 +16,3 @@ git clone https://github.com/templar-ajay/guess-the-number.git
 cd guess-the-number
 cargo run
 ```
-
-<sub>built with :heart: by Templar-Ajay</sub>
